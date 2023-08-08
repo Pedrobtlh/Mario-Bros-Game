@@ -7,7 +7,7 @@ const marioDiedsong = new Audio('./mario-died.mp3');
 marioDiedsong.volume = 0.3;
 
 import { jump } from "./jump.js" // Módulo que faz o Mário Pular
-import { changemap, changemap2 } from "./changemap.js";
+import { changemap, changemap2, changemap3, changemap4 } from "./changemap.js";
 
 
 
@@ -40,12 +40,20 @@ const loop = setInterval(()=>{
           pontos++;
           contador.innerText = pontos;
 
-          if(pontos == 2){
+          if(pontos == 10){
             changemap()
           }
-          if(pontos == 4){
+          if(pontos == 20){
             changemap2()
           }
+          if(pontos == 30){
+            changemap3()
+          }
+          if(pontos == 40){
+            changemap4()
+          }
+          
+        
 
           }
 

@@ -36,12 +36,16 @@ export function restart(ev) {
               pontos++;
               contador.innerText = pontos;
 
-              if (pontos == 2) {
+              if (pontos == 10) {
                   changemap();
               }
-              if(pontos == 4){
+              if(pontos == 20){
                 changemap2()
               }
+              if(pontos == 30){
+                changemap3()
+              }
+    
           }
       } else {
           canoPassado = false;
@@ -62,3 +66,4 @@ marioDiedsong.volume = 0.3;
 
 import { changemap } from "./changemap.js";
 import { changemap2 } from "./changemap.js";
+import { changemap3 } from "./changemap.js";
