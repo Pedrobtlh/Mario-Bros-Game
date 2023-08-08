@@ -7,6 +7,9 @@ const marioDiedsong = new Audio('./mario-died.mp3');
 marioDiedsong.volume = 0.3;
 
 import { jump } from "./jump.js" // Módulo que faz o Mário Pular
+import { changemap, changemap2 } from "./changemap.js";
+
+
 
 const loop = setInterval(()=>{
 
@@ -32,11 +35,21 @@ const loop = setInterval(()=>{
 
     } else if (pipePosition <= 0) {
         // Mario passou pelo cano
-        if (!canoPassado) {
+        if (!canoPassado ) {
           canoPassado = true;
           pontos++;
           contador.innerText = pontos;
-        }
+
+          if(pontos == 2){
+            changemap()
+          }
+          if(pontos == 4){
+            changemap2()
+          }
+
+          }
+
+        
       } else {
         // Mario não bateu no cano e ainda não passou
         canoPassado = false;
